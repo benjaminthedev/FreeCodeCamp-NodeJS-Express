@@ -18,6 +18,7 @@ app.get("/", function(req, res) {
 //App GET json data
 app.get("/json", (req, res) => {
 
+  console.log('working?');
     if (process.env.MESSAGE_STYLE === "uppercase") {
         res.json({
           message: "HELLO JSON"
