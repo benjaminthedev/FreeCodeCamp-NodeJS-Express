@@ -9,6 +9,7 @@ app.get("/", function(req, res) {
 });
 //App GET json data
 app.get("/json", (req, res) => {
+
     if (process.env.MESSAGE_STYLE === "uppercase") {
         res.json({
           message: "HELLO JSON"
@@ -19,6 +20,11 @@ app.get("/json", (req, res) => {
         });
     }
 });
+
+// Do I need to insert this const?
+
+const mySecret = process.env['MESSAGE_STYLE']
+
 
 
 
